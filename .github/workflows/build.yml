@@ -11,4 +11,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: manuals
-          path: *.pdf
+          path: "*.pdf"
