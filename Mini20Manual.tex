@@ -7,6 +7,7 @@
 \usepackage[style=numeric,backend=biber]{biblatex}
 \usepackage{array,supertabular,hhline}
 \usepackage[pdftex]{graphicx}
+\usepackage{tabularx}
 \usepackage{ragged2e}
 \usepackage{hyperref}
 \hypersetup{
@@ -47,7 +48,7 @@
 		% \tablehead{}
 		% \tabletail{}
 		% \tablelasttail{}
-		\begin{tabular}{m{3.5em}m{3.35316in}m{1.4233599in}m{0.8615598in}}
+		\begin{tabularx}{\textwidth}{m{3.5em}Xm{1.4233599in}m{0.8615598in}}
 		{Revision} &
 		{Description of changes} &
 		{Changed by} &
@@ -69,7 +70,7 @@
 		contents for the task listing so it stays up to date. Move revision information to title page} &
 		{Adrian Edwards} &
 		{8/5/2023}\\
-	\end{tabular}
+	\end{tabularx}
 	\end{FlushLeft}
 		
 	\vfill
