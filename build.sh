@@ -13,7 +13,6 @@ do
 done
 
 echo "$HASH"
-mv "**/*.pdf" .
 
 for i in *.pdf;
 do
