@@ -2,6 +2,12 @@ FILES=$(find * -type f -name '*.tex')
 
 VERSION=$(git rev-parse --short HEAD)
 
+if [ ! -z ${1} ];
+then
+	VERSION="$1"	
+fi
+
+
 SAVEIFS=$IFS   # Save current IFS (Internal Field Separator)
 IFS=$'\n'      # Change IFS to newline char
 FILES=($FILES) # split the `names` string into an array by the same name
