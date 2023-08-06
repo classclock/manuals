@@ -1,6 +1,6 @@
 FILES=$(find * -type f -name '*.tex')
 
-HASH=$(git rev-parse --short HEAD)
+VERSION=$(git rev-parse --short HEAD)
 
 SAVEIFS=$IFS   # Save current IFS (Internal Field Separator)
 IFS=$'\n'      # Change IFS to newline char
@@ -12,11 +12,11 @@ do
 	latexmk -cd -pdf -nobibtex -aux-directory=out/ -outdir=.. -emulate-aux-dir "$f"
 done
 
-echo "$HASH"
+echo "$VERSION"
 
 for i in *.pdf;
 do
 	name=${i%.*}
 	echo "$name"
-	mv "$i" "$name-$HASH.pdf";
+	mv "$i" "$name-$VERSION.pdf";
 done
