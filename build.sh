@@ -1,5 +1,11 @@
 FILES=$(find * -type f -name '*.tex')
 
+# Determine the most appropriate version to add to the filenames of individual files
+# This determines the name from the following sources, using the highest available one on the list:
+# - The first argument to this program
+# - GITHUB_REF_NAME environment variable - used for when the CI build job is triggered by a tagged version
+# - GITHUB_SHA environment variable - used for when the CI build job is triggered by a push
+# - the git sha calculated from the current directory - used as a crude fallback
 
 VERSION=$GITHUB_REF_NAME
 
