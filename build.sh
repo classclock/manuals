@@ -1,7 +1,13 @@
 FILES=$(find * -type f -name '*.tex')
 
 
-VERSION=${GITHUB_SHA:0:7}
+VERSION=$GITHUB_REF_NAME
+
+# if VERSION variable has a length of 0
+if [ ! -n $VERSION ];
+then
+	VERSION=${GITHUB_SHA:0:7}
+fi 
 
 if [ ! -n $VERSION ];
 then
