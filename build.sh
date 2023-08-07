@@ -36,5 +36,12 @@ for i in *.pdf;
 do
 	name=${i%.*}
 	echo "$name"
-	mv "$i" "$name-$VERSION.pdf";
+
+	# if VERSION variable has nonzero length, prepend the dash as we have a version to include in the filename
+	if [ -n $VERSION ];
+	then
+		VERSION="-$VERSION"
+	fi
+
+	mv "$i" "$name$VERSION.pdf";
 done
