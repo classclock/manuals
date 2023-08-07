@@ -1,6 +1,10 @@
 # ClassClock Manuals
 
-This repository contains the source code of various ClassClock manuals. Each one is written in LaTeX and is contained in its own folder along with any supplementary materials needed.
+This repository contains various ClassClock manuals. Each one has its own folder containing the LaTeX source code along with any supplementary materials (such as images).
+
+These manuals were largely inspired by/adapted from a "mini training manual" assignment from a Professional Communications class and are split into different topics for different stakeholders:
+
+- **Admin Interface User Training Manual** - This manual is intended to provide an overview of the basic features and operation of the ClassClock Admin Interface, including adding, removing, and updating bell schedules.
 
 ## Generating
 
