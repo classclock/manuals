@@ -1,6 +1,12 @@
 FILES=$(find * -type f -name '*.tex')
 
-VERSION=$(git rev-parse --short HEAD)
+
+VERSION=${GITHUB_SHA:0:7}
+
+if [ ! -n $VERSION ];
+then
+	VERSION=$(git rev-parse --short HEAD)
+fi
 
 if [ ! -z ${1} ];
 then
