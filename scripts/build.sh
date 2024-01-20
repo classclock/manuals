@@ -1,3 +1,5 @@
+#!/bin/bash
+
 FILES=$(find * -type f -name '*.tex')
 
 # Determine the most appropriate version to add to the filenames of individual files
