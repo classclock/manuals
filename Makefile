@@ -1,4 +1,5 @@
 all:
+# this points to a separate file mainly because make uses sh, not bash to run scripts. 
 	./scripts/build.sh
 
 clean:
