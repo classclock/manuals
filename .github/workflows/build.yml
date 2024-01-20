@@ -10,5 +10,5 @@ jobs:
             ./scripts/build.sh
       - uses: actions/upload-artifact@v3
         with:
-          name: manuals
+          name: ClassClock-manuals
           path: "*.pdf"
