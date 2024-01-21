@@ -41,17 +41,16 @@ do
 done
 
 echo "$VERSION"
+# if VERSION variable has nonzero length, prepend the dash as we have a version to include in the filename
+if [ -n $VERSION ];
+then
+	VERSION="-$VERSION"
+fi
 
 for i in *.pdf;
 do
 	name=${i%.*}
 	echo "$name"
-
-	# if VERSION variable has nonzero length, prepend the dash as we have a version to include in the filename
-	if [ -n $VERSION ];
-	then
-		VERSION="-$VERSION"
-	fi
 
 	mv "$i" "$name$VERSION.pdf";
 done
