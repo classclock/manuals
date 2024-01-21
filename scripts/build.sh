@@ -10,6 +10,8 @@ FILES=$(find * -type f -name '*.tex')
 
 VERSION=${GITHUB_SHA:0:7}
 
+ARCHIVEDIR="archive"
+
 if [ ! -n $VERSION ];
 then
 	VERSION=$(git rev-parse --short HEAD)
@@ -25,6 +27,13 @@ SAVEIFS=$IFS   # Save current IFS (Internal Field Separator)
 IFS=$'\n'      # Change IFS to newline char
 FILES=($FILES) # split the `names` string into an array by the same name
 IFS=$SAVEIFS   # Restore original IFS
+
+mkdir -p "$ARCHIVEDIR"
+
+for i in *.pdf;
+do
+	mv "$i" "$ARCHIVEDIR/$i"
+done
 
 for f in "${FILES[@]}";
 do 
