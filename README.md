@@ -8,7 +8,7 @@ These manuals were largely inspired by/adapted from a "mini training manual" ass
 
 ## Generating
 
-Generating the PDF's *should* be as easy as running `build.sh`. Dependencies *should* just be the `latexmk` tool and the LaTeX packages at the top of the `*.tex` files.
+Generating the PDF's *should* be as easy as running `make`. Dependencies *should* just be the `latexmk` tool and the LaTeX packages at the top of the `*.tex` files.
 
 
 ## License
