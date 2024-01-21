@@ -12,7 +12,7 @@ VERSION=${GITHUB_SHA:0:7}
 
 ARCHIVEDIR="archive"
 
-if [ ! -n $VERSION ];
+if [ ! -n "$VERSION" ];
 then
 	VERSION=$(git rev-parse --short HEAD)
 fi
@@ -42,7 +42,7 @@ done
 
 echo "$VERSION"
 # if VERSION variable has nonzero length, prepend the dash as we have a version to include in the filename
-if [ -n $VERSION ];
+if [ -n "$VERSION" ];
 then
 	VERSION="-$VERSION"
 fi
